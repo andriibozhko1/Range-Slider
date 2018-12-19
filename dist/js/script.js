@@ -33,7 +33,7 @@
     }
   };
 
-  range.addEventListener('click', function(e) {
+  const movesAtClick = function(e) {
     if(!e.target.dataset.slider) {
       sliders.dataset.value = e.layerX;
       sliders.dataset.percent = Math.floor(e.layerX * 0.199203187250996);
@@ -45,7 +45,9 @@
         maxValue.value = sliders.dataset.percent;
       }
     }
-  })
+  }
+
+  range.addEventListener('click', movesAtClick);
 
   maxValue.addEventListener("keydown", function(e) {
     if (e.keyCode === 13) {
@@ -67,5 +69,6 @@
   });
   document.addEventListener("mouseup", function() {
     range.removeEventListener("mousemove", moveSliders);
+    range.removeEventListener('click', movesAtClick);
   });
 })();
