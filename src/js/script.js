@@ -35,7 +35,15 @@
 
   range.addEventListener('click', function(e) {
     if(!e.target.dataset.slider) {
+      sliders.dataset.value = e.layerX;
+      sliders.dataset.percent = Math.floor(e.layerX * 0.199203187250996);
       sliders.style.left = e.layerX + 'px';
+      if(sliders.classList.contains('first-slider')) {
+        minValue.value = sliders.dataset.percent;
+      }
+      if(sliders.classList.contains('second-slider')) {
+        maxValue.value = sliders.dataset.percent;
+      }
     }
   })
 
