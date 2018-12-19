@@ -10,12 +10,13 @@
 
   firstSlider.dataset.value = 0;
   secondSlider.dataset.value = range.offsetWidth;
-  
+
   maxValue.value = secondSlider.dataset.percent;
   minValue.value = firstSlider.dataset.percent;
 
   const moveSliders = function(e) {
     coordinates = e.layerX;
+
     if (e.target !== sliders) {
       percentCoordinates = Math.floor(coordinates * 0.199203187250996);
       sliders.dataset.percent = percentCoordinates;
@@ -32,15 +33,21 @@
     }
   };
 
-  maxValue.addEventListener('keydown', function(e) {
-    if(e.keyCode === 13) {
-      secondSlider.style.left = maxValue.value + '%';
+  range.addEventListener('click', function(e) {
+    if(!e.target.dataset.slider) {
+      sliders.style.left = e.layerX + 'px';
+    }
+  })
+
+  maxValue.addEventListener("keydown", function(e) {
+    if (e.keyCode === 13) {
+      secondSlider.style.left = maxValue.value + "%";
     }
   });
 
-  minValue.addEventListener('keydown', function(e) {
-    if(e.keyCode === 13) {
-      firstSlider.style.left = minValue.value + '%';
+  minValue.addEventListener("keydown", function(e) {
+    if (e.keyCode === 13) {
+      firstSlider.style.left = minValue.value + "%";
     }
   });
 

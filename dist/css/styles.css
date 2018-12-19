@@ -19,12 +19,15 @@
     transition: 0.2s;
   }
 }
+
 .first-slider {
   left: 0;
 }
+
 .second-slider {
   left: 460px;
 }
+
 .CheckValue {
   font-family: sans-serif;
   font-weight: 200;
@@ -33,10 +36,11 @@
   display: block;
   text-align: center;
 }
+
 .getValue {
   border: 1px solid silver;
   border-radius: 10px;
   padding: 3px;
   outline: none;
-  color:orange;
+  color: orange;
 }
