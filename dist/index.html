@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="normalize/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="normalize/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>TEST</title>
-</head>
-<body>
-    TEST TEXT
+  </head>
+  <body>  
+    <label class="CheckValue">Min: <input class="minValue" type="text"></label>
+    <label class="CheckValue">Max: <input class="maxValue" type="text"></label>
+        <div class="range">
+          <div data-slider="true" data-value="0" data-percent='0' class="range__slider first-slider"></div>
+          <div data-slider="true" data-value="100" data-percent='100' class="range__slider second-slider"></div>      
+        </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
