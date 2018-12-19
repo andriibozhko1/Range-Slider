@@ -25,7 +25,6 @@
         sliders.style.left = sliders.dataset.value + "px";
         maxValue.value = secondSlider.dataset.percent;
         minValue.value = firstSlider.dataset.percent;
-
         if (firstSlider.dataset.value >= secondSlider.dataset.value - 50) {
           firstSlider.style.left = secondSlider.dataset.value - 50 + "px";
         }

@@ -1,7 +1,7 @@
 .range {
   height: 20px;
   width: 500px;
-  margin: 30px auto;
+  margin: 5% auto;
   position: relative;
   border: 1px solid silver;
   border-radius: 10px;
@@ -24,4 +24,19 @@
 }
 .second-slider {
   left: 460px;
+}
+.CheckValue {
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 20px;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+}
+.getValue {
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 3px;
+  outline: none;
+  color:orange;
 }
